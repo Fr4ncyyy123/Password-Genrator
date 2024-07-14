@@ -1,6 +1,9 @@
 title = document.querySelector("#title");
+const mediaQuery = window.matchMedia('(max-width: 768px)');
 window.addEventListener("load", function (e) {
-    let index = 0
+    if (!e.metches)
+    {
+        let index = 0
     Frase = "Password Generator";
     let titleContent = "";
     function animateTitle() {
@@ -18,4 +21,5 @@ window.addEventListener("load", function (e) {
     setInterval(() => {
         setTimeout(animateTitle, 800);
     }, 110 * Frase.length + 800);
+    }
 });
